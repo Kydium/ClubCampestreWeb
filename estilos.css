@@ -1,0 +1,179 @@
+/* Resetear algunos estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general para el body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #000000;
+    margin-bottom: 60px; /* Espaciado para evitar superposición del footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% del alto de la ventana */
+    margin: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #432566;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+}
+
+nav img {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 7px;
+}
+
+/* Estilos para el área principal */
+main {
+    margin: 20px auto;
+    padding: 20px 20px;
+    flex: 1; /* Permite que el contenido principal ocupe todo el espacio disponible */
+    
+    background: radial-gradient(circle, #432566, #000000);
+    background-position: 90% 20%; /* Mueve el gradiente hacia la derecha */
+    background-size: 200%;       /* Aumenta el tamaño del gradiente para suavizarlo */
+    color: white;   
+}
+
+/* Estilos para las secciones dentro del main */
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+main p, main ul {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify; /* Mejorar la legibilidad del texto */
+}
+
+main ul li {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #432566;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: auto; /* Empuja el footer al final del contenedor */
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+/* Contenedor principal del contenido */
+.content {
+    display: flex;          /* Usamos Flexbox para alinear los elementos */
+    align-items: center;    /* Centrar verticalmente el texto y la imagen */
+    gap: 20px;              /* Espaciado entre las columnas */
+}
+
+/* Estilo para el texto */
+.text {
+    flex: 1;                /* Ocupa todo el espacio disponible a la izquierda */
+}
+
+.text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.text p, .text ul {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: justify;    /* Justifica el texto para mejor legibilidad */
+}
+
+.text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilo para la imagen */
+.image img {
+    max-width: 100%;        /* La imagen no excederá el ancho de su contenedor */
+    height: auto;           /* Mantiene la proporción original */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+        text-align: center;     /* Centra el texto */
+    }
+
+    .image img {
+        max-width: 80%;        /* Ajusta el tamaño de la imagen */
+        margin: 0 auto;        /* Centra la imagen */
+    }
+}
