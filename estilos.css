@@ -37,6 +37,7 @@ nav {
 nav img {
     width: 50px;
     height: auto;
+    
 }
 
 nav ul {
@@ -65,10 +66,8 @@ nav ul li a:hover {
 
 /* Estilos para el área principal */
 main {
-    margin: 20px auto;
-    padding: 20px 20px;
+    padding: 20px 80px;
     flex: 1; /* Permite que el contenido principal ocupe todo el espacio disponible */
-    
     background: radial-gradient(circle, #432566, #000000);
     background-position: 90% 20%; /* Mueve el gradiente hacia la derecha */
     background-size: 200%;       /* Aumenta el tamaño del gradiente para suavizarlo */
@@ -163,6 +162,7 @@ footer p {
 .image img {
     max-width: 100%;        /* La imagen no excederá el ancho de su contenedor */
     height: auto;           /* Mantiene la proporción original */
+    transform: rotate(10deg)
 }
 
 /* Diseño responsivo */
